@@ -47,9 +47,12 @@ main {
     transform: translateY(0); } }
 
 .header {
-  min-height: 55rem;
+  height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(to right, #2a5298, #1e3c72);
+  background-image: linear-gradient(to right, rgba(29, 49, 134, 0.7), rgba(58, 78, 167, 0.7)), url(../img/city.jpg);
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
   padding: 2rem 10rem;
   position: relative; }
   .header__title {
@@ -65,13 +68,17 @@ main {
   .header__container {
     margin-top: 5rem; }
   .header__title-main {
-    color: #fff;
-    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 12rem;
     letter-spacing: 4px;
-    font-weight: 400;
+    font-weight: 900;
     animation: moveInLeft;
     animation-duration: 2s;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .header__anchor {
     color: #1d1d1d; }
   .header__pg {
