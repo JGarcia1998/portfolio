@@ -41,32 +41,72 @@
   }
 }
 
+.item-special {
+  transform: translateY(2rem);
+
+  &__anchor {
+    color: $med-blue;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 .header {
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(
       to right,
-      rgba(29, 49, 134, 0.7),
-      rgba(58, 78, 167, 0.7)
+      rgba(29, 49, 134, 0.4),
+      rgba(58, 78, 167, 0.4)
     ),
-    url(../img/city.jpg);
+    url(../img/city-4.jpg);
   background-size: cover;
   object-fit: cover;
   background-position: center;
 
-  padding: 2rem 10rem;
+  padding: 2rem 5rem;
   position: relative;
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     color: $white;
-    letter-spacing: 2px;
-    border: 2px solid $white;
+    letter-spacing: 3px;
     display: inline-block;
-    padding: 1rem;
-    border-radius: 2px;
     text-decoration: none;
+    font-family: "Arizona", sans-serif;
+  }
+
+  &__footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15rem;
+    background-color: rgba(27, 27, 27, 0.795);
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__heading {
+      font-size: 1.8rem;
+      color: $white;
+      margin-bottom: 0.3rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      color: $white;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      align-self: flex-start;
+    }
   }
 
   &__container {
@@ -74,15 +114,14 @@
   }
 
   &__title-main {
-    color: rgba(255, 255, 255, 0.774);
+    color: rgba(255, 255, 255, 0.808);
     font-size: 12rem;
     letter-spacing: 4px;
     font-weight: 900;
-    animation: moveInLeft;
-    animation-duration: 2s;
+
     margin-bottom: 3rem;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -92,47 +131,23 @@
   }
 
   &__pg {
-    color: $white;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-top: 0.5rem;
-    animation: moveInRight;
-    animation-duration: 2s;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $med-blue;
+    text-shadow: -1px -1px 0 $outline, 1px -1px 0 $outline, -1px 1px 0 $outline,
+      1px 1px 0 $outline;
+    font-size: 8rem;
+    font-weight: 200;
+    letter-spacing: 1rem;
+
     margin-bottom: 1rem;
-  }
-
-  &__contact {
-    background-color: transparent;
-    border: 1px solid $white;
-
-    border-radius: 3px;
-    text-decoration: none;
-    color: $white;
-    font-size: 1.5rem;
-    margin-right: 2rem;
-
-    font-weight: 400;
-    padding: 1rem 2rem;
-
-    text-align: center;
-    letter-spacing: 2px;
-    display: inline-block;
-    margin-top: 2rem;
-    text-transform: uppercase;
-    transition: all 0.4s;
-    animation: fade-in;
-    animation-delay: 1.8s;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-
-    &:hover {
-      background-color: $light-blue;
-      transform: translateY(-4px);
-    }
+    font-family: "Arizonia", cursive;
   }
 
   &__resume {
-    background-color: $light-blue;
+    background-color: $med-blue;
 
     border: none;
     border-radius: 3px;
@@ -147,18 +162,13 @@
     text-align: center;
     letter-spacing: 2px;
     display: inline-block;
-    margin-top: 2rem;
+
     text-transform: uppercase;
     transition: all 0.4s;
-    animation: fade-in;
-    animation-delay: 1.8s;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    border: 1px solid transparent;
+    transform: translateY(1.5rem);
 
     &:hover {
-      border: 1px solid $white;
-      transform: translateY(-4px);
+      background-color: $light-blue;
     }
   }
 }

@@ -46,74 +46,82 @@ main {
     opacity: 1;
     transform: translateY(0); } }
 
+.item-special {
+  transform: translateY(2rem); }
+  .item-special__anchor {
+    color: #2a5298;
+    cursor: pointer;
+    text-decoration: underline; }
+
 .header {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(to right, rgba(29, 49, 134, 0.7), rgba(58, 78, 167, 0.7)), url(../img/city.jpg);
+  background-image: linear-gradient(to right, rgba(29, 49, 134, 0.4), rgba(58, 78, 167, 0.4)), url(../img/city-4.jpg);
   background-size: cover;
   object-fit: cover;
   background-position: center;
-  padding: 2rem 10rem;
+  padding: 2rem 5rem;
   position: relative; }
   .header__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     color: #fff;
-    letter-spacing: 2px;
-    border: 2px solid #fff;
+    letter-spacing: 3px;
     display: inline-block;
-    padding: 1rem;
-    border-radius: 2px;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: "Arizona", sans-serif; }
+  .header__footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15rem;
+    background-color: rgba(27, 27, 27, 0.795);
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .header__footer__heading {
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 0.3rem; }
+    .header__footer__text {
+      font-size: 1.5rem;
+      color: #fff; }
+    .header__footer__item {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      align-self: flex-start; }
   .header__container {
     margin-top: 5rem; }
   .header__title-main {
-    color: rgba(255, 255, 255, 0.774);
+    color: rgba(255, 255, 255, 0.808);
     font-size: 12rem;
     letter-spacing: 4px;
     font-weight: 900;
-    animation: moveInLeft;
-    animation-duration: 2s;
     margin-bottom: 3rem;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%); }
   .header__anchor {
     color: #1d1d1d; }
   .header__pg {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 300;
-    margin-top: 0.5rem;
-    animation: moveInRight;
-    animation-duration: 2s;
-    margin-bottom: 1rem; }
-  .header__contact {
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 3px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    margin-right: 2rem;
-    font-weight: 400;
-    padding: 1rem 2rem;
-    text-align: center;
-    letter-spacing: 2px;
-    display: inline-block;
-    margin-top: 2rem;
-    text-transform: uppercase;
-    transition: all 0.4s;
-    animation: fade-in;
-    animation-delay: 1.8s;
-    animation-duration: 1s;
-    animation-fill-mode: backwards; }
-    .header__contact:hover {
-      background-color: #5dadec;
-      transform: translateY(-4px); }
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2a5298;
+    text-shadow: -1px -1px 0 #5a9de9, 1px -1px 0 #5a9de9, -1px 1px 0 #5a9de9, 1px 1px 0 #5a9de9;
+    font-size: 8rem;
+    font-weight: 200;
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Arizonia", cursive; }
   .header__resume {
-    background-color: #5dadec;
+    background-color: #2a5298;
     border: none;
     border-radius: 3px;
     text-decoration: none;
@@ -125,17 +133,11 @@ main {
     text-align: center;
     letter-spacing: 2px;
     display: inline-block;
-    margin-top: 2rem;
     text-transform: uppercase;
     transition: all 0.4s;
-    animation: fade-in;
-    animation-delay: 1.8s;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
-    border: 1px solid transparent; }
+    transform: translateY(1.5rem); }
     .header__resume:hover {
-      border: 1px solid #fff;
-      transform: translateY(-4px); }
+      background-color: #5dadec; }
 
 .sidebar {
   background-image: linear-gradient(to bottom, #1e3c72, #1d1d1d);
@@ -399,7 +401,8 @@ main {
   .project__item {
     background-color: #fff;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
-    border-radius: 4px; }
+    border-radius: 4px;
+    overflow: hidden; }
   .project__text {
     color: #1d1d1d;
     font-size: 1.2rem;
@@ -500,3 +503,135 @@ main {
   font-size: 5rem;
   color: #fff;
   z-index: 100; }
+
+.contact {
+  width: 100vw;
+  height: 50rem;
+  display: flex;
+  margin-bottom: 10rem;
+  margin-top: 20rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
+  .contact__one-half {
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    padding: 2rem 3rem; }
+  .contact__second-half {
+    background-color: #1e3c72;
+    width: 50%;
+    height: 100%;
+    padding: 2rem 8rem;
+    position: relative;
+    display: grid;
+    grid-template-areas: "first-input first-input" "second-input second-input" "third-input third-input" "third-input third-input" "third-input third-input" "third-input third-input" "third-input third-input" "btn btn" "btn btn";
+    grid-gap: 1rem; }
+  .contact__triangle {
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    width: 5rem;
+    height: 3.5rem;
+    background-color: #1e3c72;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -4rem;
+    top: 5rem; }
+  .contact__input-1 {
+    padding: 2rem 3rem;
+    grid-area: first-input;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: 0.2s; }
+    .contact__input-1:focus {
+      border: 1px solid #5dadec;
+      caret-color: #5dadec; }
+  .contact__input-2 {
+    padding: 2rem 3rem;
+    grid-area: second-input;
+    transition: 0.2s;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.8rem;
+    outline: none; }
+    .contact__input-2:focus {
+      border: 1px solid #5dadec;
+      caret-color: #5dadec; }
+  .contact__input-3 {
+    outline: none;
+    padding: 2rem 3rem;
+    grid-area: third-input;
+    transition: 0.2s;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    resize: none;
+    color: #fff; }
+    .contact__input-3:focus {
+      border: 1px solid #5dadec;
+      caret-color: #5dadec; }
+  .contact__flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem; }
+  .contact__info-container {
+    margin-top: 5rem;
+    transform: translateX(5rem);
+    font-size: 2rem; }
+  .contact__socials {
+    margin-top: 5rem;
+    font-size: 4rem; }
+  .contact__phone {
+    margin-left: 2rem; }
+  .contact__email {
+    margin-left: 2rem; }
+  .contact__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 1px; }
+  .contact__text {
+    font-size: 1.8rem;
+    font-weight: 300; }
+  .contact__arrow {
+    font-size: 2rem;
+    margin-left: 2rem;
+    display: inline-block;
+    font-weight: 500; }
+  .contact__btn {
+    grid-area: btn;
+    border-radius: 24px;
+    background: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border: 2px solid #fff;
+    transition: 0.2s;
+    outline: none;
+    cursor: pointer; }
+    .contact__btn:hover {
+      background-color: #5dadec; }
+
+::-webkit-input-placeholder {
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Lato", sans-serif; }
+
+.socials {
+  margin-right: 3rem;
+  font-size: 3.5rem;
+  color: #5dadec;
+  cursor: pointer;
+  transition: 0.3s; }
+  .socials:hover {
+    color: #2a5298; }
+
+form {
+  width: 100%;
+  height: 100%; }

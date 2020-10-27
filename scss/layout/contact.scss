@@ -1,0 +1,185 @@
+.contact {
+  width: 100vw;
+  height: 50rem;
+
+  display: flex;
+  margin-bottom: 10rem;
+  margin-top: 20rem;
+  box-shadow: 0 1rem 1rem rgba(black, 0.1);
+
+  &__one-half {
+    background-color: $white;
+    width: 50%;
+    height: 100%;
+    padding: 2rem 3rem;
+  }
+
+  &__second-half {
+    background-color: $dark-blue;
+    width: 50%;
+    height: 100%;
+    padding: 2rem 8rem;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "first-input first-input"
+      "second-input second-input"
+      "third-input third-input"
+      "third-input third-input"
+      "third-input third-input"
+      "third-input third-input"
+      "third-input third-input"
+      "btn btn"
+      "btn btn";
+    grid-gap: 1rem;
+  }
+
+  &__triangle {
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    width: 5rem;
+    height: 3.5rem;
+    background-color: $dark-blue;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -4rem;
+    top: 5rem;
+  }
+
+  &__input-1 {
+    padding: 2rem 3rem;
+    grid-area: first-input;
+    background: none;
+    border: 1px solid $white;
+    border-radius: 4px;
+    color: $white;
+    font-size: 1.8rem;
+    transition: 0.2s;
+
+    &:focus {
+      border: 1px solid $light-blue;
+      caret-color: $light-blue;
+    }
+  }
+  &__input-2 {
+    padding: 2rem 3rem;
+    grid-area: second-input;
+    transition: 0.2s;
+    background: none;
+    border: 1px solid $white;
+    border-radius: 4px;
+    color: $white;
+    font-size: 1.8rem;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $light-blue;
+      caret-color: $light-blue;
+    }
+  }
+
+  &__input-3 {
+    outline: none;
+    padding: 2rem 3rem;
+    grid-area: third-input;
+    transition: 0.2s;
+    background: none;
+    border: 1px solid $white;
+    border-radius: 4px;
+    resize: none;
+
+    color: $white;
+
+    &:focus {
+      border: 1px solid $light-blue;
+      caret-color: $light-blue;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  &__info-container {
+    margin-top: 5rem;
+    transform: translateX(5rem);
+    font-size: 2rem;
+  }
+
+  &__socials {
+    margin-top: 5rem;
+    font-size: 4rem;
+  }
+
+  &__phone {
+    margin-left: 2rem;
+  }
+
+  &__email {
+    margin-left: 2rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  &__arrow {
+    font-size: 2rem;
+    margin-left: 2rem;
+    display: inline-block;
+    font-weight: 500;
+  }
+
+  &__btn {
+    grid-area: btn;
+    border-radius: 24px;
+    background: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: $white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border: 2px solid $white;
+    transition: 0.2s;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  font-size: 1.4rem;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+}
+
+.socials {
+  margin-right: 3rem;
+  font-size: 3.5rem;
+
+  color: $light-blue;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: $med-blue;
+  }
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}

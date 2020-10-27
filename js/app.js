@@ -15,6 +15,8 @@ document
     }
   });
 
+console.log(Math.floor(Math.random() * 5) + 1);
+
 $(window).scroll(function () {
   /* Check the location of each desired element */
   $(".intro").each(function (i) {
