@@ -92,9 +92,20 @@
   }
 
   &__span {
-    border-bottom: 2px solid $light-blue;
     position: relative;
     font-size: 2rem;
+  }
+
+  &__span::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, $light-blue, $med-blue);
   }
 
   &__span-info {
@@ -143,7 +154,7 @@
 
   &__about-me {
     font-size: 1.5rem;
-    color: #838181;
+    color: #6d6c6c;
     line-height: 1.7;
   }
 }

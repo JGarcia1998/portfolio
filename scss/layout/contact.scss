@@ -54,6 +54,7 @@
     color: $white;
     font-size: 1.8rem;
     transition: 0.2s;
+    outline: none;
 
     &:focus {
       border: 1px solid $light-blue;
@@ -130,6 +131,7 @@
   &__text {
     font-size: 1.8rem;
     font-weight: 300;
+    width: 80%;
   }
 
   &__arrow {

@@ -81,7 +81,7 @@
       </header>
       <div class="intro">
         <div class="intro__border">
-          <div class="intro__photo"></div>
+          <div id="about" class="intro__photo"></div>
         </div>
 
         <h2 class="intro__title">About me</h2>
@@ -91,12 +91,12 @@
         <div class="intro__column">
           <h3 class="intro__developer">Front End Developer</h3>
           <p class="intro__about-me">
-            Hello, my name is Jared Garcia and I'm Full-Stack Developer located
-            in College Station, Tx. I have an immense passion for Front End
-            Development. I was very interested in programming as a teenager, but
-            it was always for fun. I never thought about turning it into a
+            Hello, my name is Jared Garcia and I am located in College Station,
+            Tx. Although I know Full-Stack Web Development, I have a big passion
+            for Front End. I was very interested in development as a teenager,
+            but it was always for fun. I never thought about turning it into a
             career until I realized there was a real demand for it. What I love
-            most about software development is the constant challenge of
+            most about Software Development is the constant challenge of
             problem-solving and being able to express creativity by bringing
             abstract ideas to life. In March of 2020 I enrolled in DigitalCrafts
             immersive 4 month Bootcamp where I studied Full-Stack Web
@@ -146,7 +146,7 @@
         </div>
       </div>
 
-      <h2 class="skill-title">Here is what I know</h2>
+      <h2 id="skills" class="skill-title">Here is what I know</h2>
 
       <div class="skills">
         <div class="wrapper">
@@ -191,7 +191,8 @@
         </div>
       </div>
 
-      <section>
+      <section id="projects">
+        <h2 class="projects-title">My Projects</h2>
         <div class="project">
           <span class="project__item"
             ><h3 class="project__name">Carbonna</h3>
@@ -378,12 +379,14 @@
         </div>
       </section>
 
-      <section>
+      <section id="contact">
         <div class="contact">
           <div class="contact__one-half">
             <h2 class="contact__title">Let's get in touch</h2>
             <p class="contact__text">
-              I'm Available anytime via email or phone.
+              If you have any questions regarding projects, or just want to get
+              in touch, I can be reached via email or phone. If you'd like to
+              see more of my work, my socials can be found below.
             </p>
             <div class="contact__info-container">
               <div class="contact__flex">
@@ -409,32 +412,35 @@
             </div>
           </div>
 
-          <div class="contact__second-half">
+          <form class="contact__second-half" method="post" action="contact.php">
             <div class="contact__triangle"></div>
-            <form method="post" action="contact.php">
-              <input
-                name="name"
-                placeholder="Name"
-                class="contact__input-1"
-                type="text"
-              />
-              <input
-                name="mail"
-                placeholder="Email"
-                class="contact__input-2"
-                type="text"
-              />
-              <textarea
-                name="message"
-                placeholder="Message"
-                class="contact__input-3"
-              ></textarea>
-              <button name="submit" value="send message" type="submit" class="contact__btn">
-                Send message
-                <p class="contact__arrow">&rarr;</p>
-              </button>
-            </form>
-          </div>
+            <input
+              name="name"
+              placeholder="Name"
+              class="contact__input-1"
+              type="text"
+            />
+            <input
+              name="mail"
+              placeholder="Email"
+              class="contact__input-2"
+              type="text"
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              class="contact__input-3"
+            ></textarea>
+            <button
+              name="submit"
+              value="send message"
+              type="submit"
+              class="contact__btn"
+            >
+              Send message
+              <p class="contact__arrow">&rarr;</p>
+            </button>
+          </form>
         </div>
       </section>
     </main>
@@ -458,30 +464,30 @@
           ></a>
         </div>
 
-        <a href="#" class="sidebar__link"
+        <a href="#about" class="sidebar__link menu"
           ><i class="fas fa-user icon"></i>About</a
         >
 
-        <a href="#" class="sidebar__link"
+        <a href="#skills" class="sidebar__link menu"
           ><i class="fas fa-magic icon"></i>Skills</a
         >
-        <a href="#" class="sidebar__link"
+        <a href="#projects" class="sidebar__link menu"
           ><i class="fas fa-book icon"></i>Projects</a
         >
-        <a href="#" class="sidebar__link"
+        <a href="#contact" class="sidebar__link menu"
           ><i class="fas fa-phone-volume icon"></i>Contact</a
         >
 
         <a
           target="__blank"
           href="https://jaredspdf.s3.us-east-2.amazonaws.com/newresume.pdf"
-          class="sidebar__link"
+          class="sidebar__link menu"
           ><i class="fas fa-paperclip icon"></i>Resume</a
         >
         <a
           target="__blank"
           href="https://github.com/JGarcia1998"
-          class="sidebar__link"
+          class="sidebar__link menu"
           ><i class="fas fa-code-branch icon"></i>Github</a
         >
       </div>

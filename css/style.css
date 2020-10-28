@@ -6,7 +6,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -318,9 +319,18 @@ main {
     position: absolute;
     right: -10px; }
   .intro__span {
-    border-bottom: 2px solid #5dadec;
     position: relative;
     font-size: 2rem; }
+  .intro__span::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #5dadec, #2a5298); }
   .intro__span-info {
     font-size: 2rem;
     margin-left: 2rem; }
@@ -356,7 +366,7 @@ main {
     width: 100%; }
   .intro__about-me {
     font-size: 1.5rem;
-    color: #838181;
+    color: #6d6c6c;
     line-height: 1.7; }
 
 .personal {
@@ -504,6 +514,14 @@ main {
   color: #fff;
   z-index: 100; }
 
+.projects-title {
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: #1d1d1d;
+  margin-top: 8rem; }
+
 .contact {
   width: 100vw;
   height: 50rem;
@@ -542,7 +560,8 @@ main {
     border-radius: 4px;
     color: #fff;
     font-size: 1.8rem;
-    transition: 0.2s; }
+    transition: 0.2s;
+    outline: none; }
     .contact__input-1:focus {
       border: 1px solid #5dadec;
       caret-color: #5dadec; }
@@ -594,7 +613,8 @@ main {
     letter-spacing: 1px; }
   .contact__text {
     font-size: 1.8rem;
-    font-weight: 300; }
+    font-weight: 300;
+    width: 80%; }
   .contact__arrow {
     font-size: 2rem;
     margin-left: 2rem;

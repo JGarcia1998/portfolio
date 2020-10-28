@@ -9,10 +9,10 @@ if (isset($_POST['submit'])) {
 
     $mailTo = "jared_garcia@aol.com";
     $headers = "From: ".$mailFrom;
-    $txt = "You have an email from".$name."\n\n".$message;
+    $txt = "You have an email from ".$name;
 
 
-    mail($mailTo, $txt, $headers);
+    mail($mailTo, $headers, $message);
     header('Location: index.html');
 }
 

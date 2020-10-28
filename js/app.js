@@ -15,7 +15,16 @@ document
     }
   });
 
-console.log(Math.floor(Math.random() * 5) + 1);
+document.querySelectorAll(".menu").forEach((item) => {
+  item.addEventListener("click", function () {
+    document.querySelector(".sidebar").style.width = 0;
+
+    document.querySelector(".sidebar__label").style.top = "5rem";
+    document.querySelector(".sidebar__label").style.left = "-8rem";
+    document.getElementById("main").style.filter = "none";
+    document.querySelector(".sidebar__input").checked = false;
+  });
+});
 
 $(window).scroll(function () {
   /* Check the location of each desired element */
