@@ -48,6 +48,11 @@
     color: $med-blue;
     cursor: pointer;
     text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      color: $light-blue;
+    }
   }
 }
 
@@ -60,8 +65,8 @@
       rgba(58, 78, 167, 0.4)
     ),
     url(../img/city-4.jpg);
+
   background-size: cover;
-  object-fit: cover;
   background-position: center;
 
   padding: 2rem 5rem;
@@ -82,10 +87,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 15rem;
+    height: 17rem;
     background-color: rgba(27, 27, 27, 0.795);
     clip-path: polygon(0 0, 100% 30%, 100% 100%, 0% 100%);
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -185,7 +190,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 1s;
+  transition: all 0.5s;
 
   &__container {
     display: flex;
@@ -206,7 +211,7 @@
     color: #fff;
     padding: 1.5rem 3rem;
     position: relative;
-    transition: 0.8s;
+    transition: 0.5s;
   }
   &__link::after {
     content: "";
@@ -245,7 +250,7 @@
     transform: translateY(-50%);
     border: 3px solid white;
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.5s;
     outline: none;
     box-shadow: 0 1rem 1rem rgba(black, 0.2);
     z-index: 9999;

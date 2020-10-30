@@ -1,187 +1,146 @@
 .contact {
-  width: 100vw;
-  height: 50rem;
+  background-color: transparent;
+  width: 100%;
+  height: 30rem;
+  margin-top: 50rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-  display: flex;
-  margin-bottom: 10rem;
-  margin-top: 20rem;
-  box-shadow: 0 1rem 1rem rgba(black, 0.1);
-
-  &__one-half {
-    background-color: $white;
-    width: 50%;
-    height: 100%;
-    padding: 2rem 3rem;
-  }
-
-  &__second-half {
-    background-color: $dark-blue;
-    width: 50%;
-    height: 100%;
-    padding: 2rem 8rem;
-    position: relative;
-    display: grid;
-    grid-template-areas:
-      "first-input first-input"
-      "second-input second-input"
-      "third-input third-input"
-      "third-input third-input"
-      "third-input third-input"
-      "third-input third-input"
-      "third-input third-input"
-      "btn btn"
-      "btn btn";
-    grid-gap: 1rem;
-  }
-
-  &__triangle {
-    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
-    width: 5rem;
-    height: 3.5rem;
-    background-color: $dark-blue;
-    position: absolute;
-    transform: rotate(-90deg);
-    left: -4rem;
-    top: 5rem;
-  }
-
-  &__input-1 {
-    padding: 2rem 3rem;
-    grid-area: first-input;
-    background: none;
-    border: 1px solid $white;
-    border-radius: 4px;
+  &__text {
     color: $white;
-    font-size: 1.8rem;
-    transition: 0.2s;
-    outline: none;
-
-    &:focus {
-      border: 1px solid $light-blue;
-      caret-color: $light-blue;
-    }
-  }
-  &__input-2 {
-    padding: 2rem 3rem;
-    grid-area: second-input;
-    transition: 0.2s;
-    background: none;
-    border: 1px solid $white;
-    border-radius: 4px;
-    color: $white;
-    font-size: 1.8rem;
-    outline: none;
-
-    &:focus {
-      border: 1px solid $light-blue;
-      caret-color: $light-blue;
-    }
-  }
-
-  &__input-3 {
-    outline: none;
-    padding: 2rem 3rem;
-    grid-area: third-input;
-    transition: 0.2s;
-    background: none;
-    border: 1px solid $white;
-    border-radius: 4px;
-    resize: none;
-
-    color: $white;
-
-    &:focus {
-      border: 1px solid $light-blue;
-      caret-color: $light-blue;
-    }
-  }
-
-  &__flex {
-    display: flex;
-    align-items: center;
     margin-bottom: 3rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  &__form-container {
+    background-color: $dark-blue;
+    padding: 3rem 2rem;
+    width: 60rem;
+    height: 40rem;
+    position: absolute;
+    top: -15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    z-index: 2;
   }
 
   &__info-container {
-    margin-top: 5rem;
-    transform: translateX(5rem);
-    font-size: 2rem;
+    width: 60%;
+    float: right;
+    height: 100%;
   }
 
-  &__socials {
-    margin-top: 5rem;
-    font-size: 4rem;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
   }
 
-  &__phone {
-    margin-left: 2rem;
+  &__inputs {
+    padding: 1rem 1.3rem;
+    background-color: $darkest-blue;
+    border-radius: 2px;
+    border: none;
+    caret-color: $white;
+    color: $white;
+    outline: none;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    resize: none;
   }
 
-  &__email {
-    margin-left: 2rem;
+  &__inputs:focus {
+    border: 1px solid $light-blue;
   }
 
   &__title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-  }
-
-  &__text {
     font-size: 1.8rem;
-    font-weight: 300;
-    width: 80%;
-  }
-
-  &__arrow {
-    font-size: 2rem;
-    margin-left: 2rem;
-    display: inline-block;
-    font-weight: 500;
+    font-weight: 400;
+    color: $white;
   }
 
   &__btn {
-    grid-area: btn;
-    border-radius: 24px;
-    background: none;
+    align-self: flex-start;
+    padding: 1rem 2rem;
     text-transform: uppercase;
-    font-size: 1.5rem;
-    color: $white;
-    font-weight: 300;
-    letter-spacing: 2px;
-    border: 2px solid $white;
-    transition: 0.2s;
-    outline: none;
+    width: 10rem;
+    font-family: "Nunito", sans-serif;
+    color: $darkest-blue;
+    letter-spacing: 1px;
     cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    border-radius: 2px;
+  }
 
-    &:hover {
-      background-color: $light-blue;
-    }
+  &__btn:hover {
+    background-color: rgb(211, 207, 207);
   }
 }
 
 ::-webkit-input-placeholder {
-  font-size: 1.4rem;
   color: $white;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-family: "Lato", sans-serif;
 }
 
-.socials {
-  margin-right: 3rem;
-  font-size: 3.5rem;
+.contact-left {
+  width: 30rem;
+  height: 35rem;
+  background-color: $white;
+  position: absolute;
+  left: -10rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  box-shadow: 0 1rem 1rem rgba(black, 0.2);
+  padding: 2rem 3rem;
 
-  color: $light-blue;
-  cursor: pointer;
-  transition: 0.3s;
-  &:hover {
+  &__title {
+    font-size: 1.8rem;
+    color: $grey-dark;
+    margin-bottom: 3rem;
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    color: $grey-light;
+  }
+
+  &-info i {
+    margin-right: 1.5rem;
+    font-size: 1.7rem;
     color: $med-blue;
+  }
+
+  &-socials {
+    font-size: 3rem;
+
+    margin-right: 2rem;
+    color: $med-blue;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  &-socials:hover {
+    color: $light-blue;
+  }
+
+  &__social-container {
+    margin-top: 5rem;
   }
 }
 
-form {
+.svg {
+  margin-top: 40rem;
+  position: relative;
+  z-index: -2;
+
+  display: block;
   width: 100%;
-  height: 100%;
 }
