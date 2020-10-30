@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   box-sizing: border-box;
   line-height: 1.7;
-  background-color: #e4e4e4;
+  background-color: #d3d9e5;
   position: relative; }
 
 main {
@@ -139,7 +139,7 @@ main {
     display: inline-block;
     text-transform: uppercase;
     transition: all 0.4s;
-    transform: translateY(1.5rem); }
+    transform: translateY(1.8rem); }
     .header__resume:hover {
       background-color: #5dadec; }
 
@@ -181,7 +181,7 @@ main {
     right: 0;
     width: 3px;
     transform: scaleY(0);
-    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
     z-index: -1; }
   .sidebar__link:hover::after {
     transform: scaleY(1);
