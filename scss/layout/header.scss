@@ -44,6 +44,10 @@
 .item-special {
   transform: translateY(2rem);
 
+  @media only screen and (max-width: 28.2em) {
+    transform: translateY(4rem);
+  }
+
   &__anchor {
     color: $med-blue;
     cursor: pointer;
@@ -79,6 +83,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $white;
+
+    @media only screen and (max-width: 30.05em) {
+      top: 45%;
+    }
   }
 
   &__title {
@@ -104,6 +112,23 @@
     align-items: center;
     justify-content: space-between;
 
+    @media only screen and (max-width: 54.5em) {
+      height: 21rem;
+    }
+
+    @media only screen and (max-width: 38em) {
+      height: 24rem;
+    }
+
+    @media only screen and (max-width: 33.75em) {
+      height: 27rem;
+    }
+
+    @media only screen and (max-width: 28.2em) {
+      flex-wrap: wrap;
+      height: 30rem;
+    }
+
     &__heading {
       font-size: 1.8rem;
       color: $white;
@@ -120,6 +145,22 @@
       flex-direction: column;
       width: 25%;
       align-self: flex-start;
+
+      @media only screen and (max-width: 54.5em) {
+        align-self: center;
+      }
+
+      @media only screen and (max-width: 38em) {
+        width: 30%;
+      }
+
+      @media only screen and (max-width: 33.75em) {
+        align-self: center;
+      }
+
+      @media only screen and (max-width: 28.2em) {
+        width: 42%;
+      }
     }
   }
 
@@ -135,10 +176,14 @@
     white-space: nowrap;
     margin-bottom: 3rem;
     position: absolute;
-
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 30.05em) {
+      font-size: 9rem;
+      top: 30%;
+    }
   }
 
   &__anchor {
@@ -160,6 +205,11 @@
 
     margin-bottom: 1rem;
     font-family: "Arizonia", cursive;
+
+    @media only screen and (max-width: 30.05em) {
+      font-size: 6rem;
+      top: 30%;
+    }
   }
 
   &__resume {
@@ -170,7 +220,6 @@
     text-decoration: none;
     color: $white;
     font-size: 1.5rem;
-    margin-right: 2rem;
 
     font-weight: 400;
     padding: 1rem 2rem;
@@ -178,10 +227,18 @@
     text-align: center;
     letter-spacing: 2px;
     display: inline-block;
-
+    margin-right: 1rem;
     text-transform: uppercase;
     transition: all 0.4s;
     transform: translateY(1.8rem);
+
+    @media only screen and (max-width: 54.5em) {
+      transform: translateY(2.4rem);
+    }
+
+    @media only screen and (max-width: 28.2em) {
+      transform: translateY(1rem);
+    }
 
     &:hover {
       background-color: $light-blue;
@@ -263,7 +320,7 @@
     transition: all 0.5s;
     outline: none;
     box-shadow: 0 1rem 1rem rgba(black, 0.2);
-    z-index: 9999;
+    z-index: 1000;
   }
 
   &__label::after {

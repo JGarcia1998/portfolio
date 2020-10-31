@@ -1,3 +1,19 @@
+let min = window.matchMedia("(max-width: 37.5em)");
+let med = window.matchMedia("(max-width: 43.75em)");
+let max = window.matchMedia("(max-width: 28.1em)");
+
+function checkMin() {
+  if (min.matches) {
+    document.querySelector(".header__resume").innerHTML = "Resume" + "&rarr;";
+  } else {
+    document.querySelector(".header__resume").innerHTML =
+      "View My Resume" + "&rarr;";
+  }
+}
+
+checkMin();
+window.addEventListener("resize", () => checkMin());
+
 document
   .querySelector(".sidebar__label")
   .addEventListener("click", function () {
@@ -8,7 +24,12 @@ document
       document.querySelector(".sidebar__label").style.left = "-8rem";
       document.getElementById("main").style.filter = "none";
     } else {
-      document.querySelector(".sidebar").style.width = "25vw";
+      if (med.matches) {
+        document.querySelector(".sidebar").style.width = "45vw";
+      } else {
+        document.querySelector(".sidebar").style.width = "25vw";
+      }
+
       document.querySelector(".sidebar__label").style.top = "50%";
       document.querySelector(".sidebar__label").style.left = "-2.5rem";
       document.getElementById("main").style.filter = "blur(5px)";
@@ -25,35 +46,3 @@ document.querySelectorAll(".menu").forEach((item) => {
     document.querySelector(".sidebar__input").checked = false;
   });
 });
-
-fadeIn("intro");
-
-fadeIn("intro__about-container");
-
-fadeIn("skill-title");
-
-fadeIn("skills");
-
-fadeIn("section-in");
-
-fadeIn("contact");
-
-function fadeIn(className) {
-  $(window).scroll(function () {
-    /* Check the location of each desired element */
-    $(`.${className}`).each(function (i) {
-      var bottom_of_object = $(this).offset().top;
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      /* If the object is completely visible in the window, fade it it */
-      if (bottom_of_window > bottom_of_object) {
-        $(this).animate(
-          {
-            opacity: "1",
-          },
-          900
-        );
-      }
-    });
-  });
-}
