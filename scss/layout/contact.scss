@@ -7,6 +7,10 @@
   bottom: 0;
   left: 0;
 
+  @media only screen and (max-width: 33.43em) {
+    z-index: -1;
+  }
+
   &__text {
     color: $white;
     margin-bottom: 3rem;
