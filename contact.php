@@ -2,8 +2,11 @@
 
 
 if (isset($_POST['submit'])) {
+
+    $json = array();
+
     $name = $_POST['name'];
-    $mailFrom = $_POST['mail'];
+    $mailFrom = $_POST['email'];
     $message = $_POST['message'];
 
 
@@ -13,8 +16,14 @@ if (isset($_POST['submit'])) {
 
 
     mail($mailTo, $headers, $message);
-    header('Location: index.html');
+    header("Location: form.html");
+  
+    
+    
 }
 
 ?>
+
+
+
 

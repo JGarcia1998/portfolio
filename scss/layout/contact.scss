@@ -188,3 +188,26 @@
     display: none;
   }
 }
+
+.success {
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: $grey-dark;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.anchor {
+  font-size: 1.8rem;
+  color: $med-blue;
+  display: table;
+  margin: 0 auto;
+}

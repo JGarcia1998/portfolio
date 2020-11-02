@@ -397,12 +397,18 @@
               <p class="contact-left-text">College Station, TX</p></span
             >
             <div class="contact-left__social-container">
-              <span class="contact-left-socials"
+              <a
+                href="https://www.linkedin.com/in/jared-garcia-3a51741a6/"
+                target="__blank"
+                class="contact-left-socials"
                 ><i class="fab fa-linkedin"></i
-              ></span>
-              <span class="contact-left-socials"
+              ></a>
+              <a
+                target="__blank"
+                href="https://github.com/JGarcia1998"
+                class="contact-left-socials"
                 ><i class="fab fa-github-square"></i
-              ></span>
+              ></a>
             </div>
           </div>
 
@@ -411,15 +417,31 @@
             <p class="contact__text">
               Feel free to message me using the form below
             </p>
-            <form class="contact__form">
-              <input class="contact__inputs" type="text" placeholder="Name" />
-              <input class="contact__inputs" type="text" placeholder="Email" />
+            <form action="contact.php" method="POST" class="contact__form">
+              <input
+                name="name"
+                class="contact__inputs"
+                type="text"
+                placeholder="Name"
+                required
+              />
+              <input
+                name="email"
+                class="contact__inputs"
+                type="text"
+                placeholder="Email"
+                required
+              />
               <textarea
                 class="contact__inputs"
                 rows="6"
                 placeholder="Message"
+                name="message"
+                required
               ></textarea>
-              <button class="contact__btn" type="submit">Send</button>
+              <button name="submit" class="contact__btn" type="submit">
+                Send
+              </button>
             </form>
           </div>
         </div>
