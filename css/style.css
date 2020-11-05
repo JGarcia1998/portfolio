@@ -163,7 +163,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #2a5298;
-    text-shadow: -1px -1px 0 #5a9de9, 1px -1px 0 #5a9de9, -1px 1px 0 #5a9de9, 1px 1px 0 #5a9de9;
+    text-shadow: -1px -1px 0 #5797e0, 1px -1px 0 #5797e0, -1px 1px 0 #5797e0, 1px 1px 0 #5797e0;
     font-size: 8rem;
     font-weight: 200;
     letter-spacing: 1rem;
@@ -803,7 +803,7 @@ main {
 
 .success {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   letter-spacing: 1px;
   color: #1d1d1d;
   font-weight: 300;
@@ -811,12 +811,12 @@ main {
 
 .text {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #777;
   margin-bottom: 2rem; }
 
 .anchor {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #2a5298;
   display: table;
   margin: 0 auto; }
